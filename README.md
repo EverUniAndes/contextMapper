@@ -1,28 +1,27 @@
-![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png)
-# Context Mapper Demo for Online IDE 
-[![Build](https://github.com/ContextMapper/web-ide-demo/actions/workflows/build.yml/badge.svg)](https://github.com/ContextMapper/web-ide-demo/actions) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Welcome to Context Mapper's demo repository. It illustrates how you can configure your own repository for the usage of Context Mapper in the online IDE [Gitpod](https://www.gitpod.io/).
+# Estructura del proyecto
+El proyecto cuenta con la estructura recomendada en los tutoriales del curso, principalmente corresponde aun fork del repositorio ContextMapper/web-ide-demo
+![image](https://github.com/user-attachments/assets/cd4b54ec-fb78-4707-b555-02390286aa16)
 
-## Start Using Context Mapper Now
-Start the online IDE and use Context Mapper right now:
+# Donde encontrar los fragmentos de código para cada item de calificación.
+Los fragmentos de código correspondientes a la definición de dominios, subdominios y contextos se encuentra en la ruta ...contextMapper\src\main\cml correspondiente a los archivos saludTechAlpesASIS.cml y saludTechAlpesTOBE.cml
 
-<a href="https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo" style="padding: 10px;">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="150" alt="Push" align="center">
-</a>
-<br/><br/>
+![image](https://github.com/user-attachments/assets/2a6a1780-2d11-45c9-9f34-7f2907465f54)
 
-## Open the Demo File
-In the folder `src/main/cml` you find a small **[CML demo](./src/main/cml/demo.cml)** (DDD sample application) where you can start to familiarize yourself with our DSL and our tools.
-You can find more info's about the tool and a complete documentation on our website [https://contextmapper.org/](https://contextmapper.org/).
 
-## Create Your Own Context Mapping Repository
-You can simply fork this repository and click the button above to start the online IDE for your repo.
+# En el caso del lenguaje ubicuo la imagen o imágenes en formato PNG, JPG o PDF. Si el archivo no abre, el evaluador está en la potestad de tomarlo como no presentado.
 
-## Useful Links
- 
- * [More example models](https://github.com/ContextMapper/context-mapper-examples)
- * [CML language reference](https://contextmapper.org/docs/language-reference/)
- * [Rapid prototyping tutorial](https://contextmapper.org/docs/rapid-ooad/)
- * [Architectural Refactorings](https://contextmapper.org/docs/architectural-refactorings/)
- * [Generators](https://contextmapper.org/docs/generators/)
+## ContextMap AS-IS
+![saludTechAlpesASIS_ContextMap](https://github.com/user-attachments/assets/607170f6-8faf-4608-9a68-ac7e6392a228)
+
+## ContextMap TO-BE
+![saludTechAlpesTOBE_ContextMap](https://github.com/user-attachments/assets/a42d2941-2fd2-40b8-bc3f-32ab8593ab92)
+
+## EventStorming AS-IS
+![EventStorming_Equipo_ASIS](https://github.com/user-attachments/assets/c879c73d-0b44-41f5-8d27-af5601cc7d3e)
+
+## EventStorming TO-BE
+![EventStorming_Equipo_TOBE](https://github.com/user-attachments/assets/2eeeb3df-e7c5-4c53-b9be-a271c68f2da9)
+
+Los EventStorming se encuentran en el siguiente enlace:
+https://miro.com/welcomeonboard/SG1jK3QzQkFXeUtkT0lrRGlRcFFaQWZGL0RldEVleEN6eGtjd04yejZWeEZBSjFsdjhtbVJzd2ptVTUrRFpZME8zendRNEdvbTgyc0ZUcjVIMmM0dWlRQU8rK0QwZnJkbjBSTHV5VGdubEQzVmhRV1JtWmx5YUVQd0w0V3c2VDkhZQ==?share_link_id=737120778965
