@@ -1,0 +1,42 @@
+Domain MetadatosImagenesDiagnosticosMedicosAnonimizados {
+  domainVisionStatement = "Obtención, procesamiento y distribución de imágenes médicas y diagnósticos anonimizados."
+
+  Subdomain ObtenerDatos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "ealiza los procesos para anonimizar los datos de los proveedores creando entornos privados para el aislamiento de los datos de cada proveedor."
+  }
+
+  Subdomain AnalisisDatos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Realiza las validaciones para asegurar que los datos son anonimizados correctamente para ejecutar el análisis por modelos de IA según modalidad y región anatómica de la imagen."
+  }
+
+  Subdomain VentaDatos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Distribuye los datos mediante su comercialización por medio de 3 tipos de productos diferentes."
+  }
+
+  
+}
+
+
+BoundedContext ContextoPrueba implements ObtenerDatos, AnalisisDatos  {
+
+}
+
+BoundedContext ContextoPrueba2 implements VentaDatos  {
+
+}
+
+ContextMap DatosSaludTechAlpes {
+	state = AS_IS
+
+	contains ContextoPrueba
+    contains ContextoPrueba2
+	
+
+	ContextoPrueba2 [D] <- [U] ContextoPrueba
+
+
+}
+
