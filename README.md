@@ -1,3 +1,6 @@
+# Ejecución del proyecto
+Para ejecutar el proyecto diríjase a la siguiente URL de Gitpod
+https://gitpod.io/#https://github.com/EverUniAndes/contextMapper
 
 # Estructura del proyecto
 El proyecto cuenta con la estructura recomendada en los tutoriales del curso, principalmente corresponde aun fork del repositorio ContextMapper/web-ide-demo
