@@ -1,0 +1,86 @@
+Domain MetadatosImagenesDiagnosticosMedicosAnonimizados {
+  domainVisionStatement = "Obtención, procesamiento y distribución de imágenes médicas y diagnósticos anonimizados."
+
+  Subdomain CrearAmbiente {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Creación de un ambiente completamente privado en su nube para almacenar los datos."
+  }
+
+  Subdomain PrepararDatos {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Preparar los datos a los sistemas en la nube para que el proceso sea ligero y sin involucrar expertos,."
+  }
+
+  Subdomain InformacionSensible {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Quitar información sensible de las imágenes DICOM."
+  }
+
+  Subdomain CrearToken{
+    type = CORE_DOMAIN
+    domainVisionStatement = "Crear conexión entre pacientes, diagnósticos e imágenes."
+  }
+
+  Subdomain VerificacionDatosAutomatica {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Verificación automatizada de datos anonimizados."
+  }
+
+  Subdomain AgrupamientoDatos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Agrupar las imágenes y archivos de diagnostico de una manera en que puedan ser procesados para la generación de etiquetas y metadatos."
+  }
+
+  Subdomain ModeloIA {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Procesamiento y analisis de datos con modelos IA por tipo, parte del cuerpo y patologia."
+  }
+
+  Subdomain AlmacenarDatos {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Almacenamiento de archivos estructurados en formato parquet en la nube privada del partner."
+  }
+
+  Subdomain VentaDatos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Distribuye los datos mediante su comercialización por medio de 3 tipos de productos diferentes."
+  }
+}
+
+
+BoundedContext ContextoAnonimizarDatos implements CrearAmbiente,PrepararDatos, InformacionSensible,CrearToken{
+
+}
+
+BoundedContext ContextoEtiquetadoCaracterizacion implements VerificacionDatosAutomatica, AgrupamientoDatos{
+
+}
+
+BoundedContext ContextoAseguramientoAnonimizacion implements VerificacionDatosAutomatica{
+
+}
+
+BoundedContext ContextoAnalisis implements ModeloIA, AlmacenarDatos{
+
+}
+
+BoundedContext ContextoVentaDatos implements VentaDatos  {
+
+}
+
+
+ContextMap DatosSaludTechAlpes {
+	state = TO_BE
+
+	contains ContextoAnonimizarDatos
+  contains ContextoEtiquetadoCaracterizacion
+  contains ContextoAseguramientoAnonimizacion
+  contains ContextoAnalisis
+  contains ContextoVentaDatos
+	
+  ContextoAnonimizarDatos [U] -> [D] ContextoEtiquetadoCaracterizacion
+  ContextoEtiquetadoCaracterizacion [SK] <-> [SK] ContextoAseguramientoAnonimizacion
+  ContextoAseguramientoAnonimizacion [U] -> [D] ContextoAnalisis 
+  ContextoAnalisis [U] -> [D] ContextoVentaDatos
+}
+
